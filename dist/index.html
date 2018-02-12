@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<title>Start project</title>
+
+	<!-- for jquery in bottom -->
+	<script>
+        function $(n) {
+            function e(n, e) {console.error.apply(console, [n, "$("].concat([].slice.call(e, 0)).concat([")"]))}
+            if (1 === arguments.length || e("Bad signature used instead $(function|document).", arguments), n === document) return {ready: $};
+            "function" == typeof n || e("Bad signature used instead $(function).", arguments), $ready.push(n)
+        }
+        $ready = [], jQuery = $;
+	</script>
+
+	<!-- styles -->
+	<link href="./css/common.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+	<div class="row">
+		<div class="row__col row__col_sm-12">
+			Hello, world!
+		</div>
+		<div class="row__col row__col_sm-12">
+			Start project from <a href="//jekins.ru">jekins.ru</a>
+		</div>
+	</div>
+
+</div>
+
+<!-- scripts -->
+<script src="./plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="./js/common.min.js"></script>
+
+</body>
+</html>

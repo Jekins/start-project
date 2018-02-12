@@ -1,0 +1,21 @@
+{
+  "name": "StartProject",
+  "version": "0.0.1",
+  "description": "Start project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jekins"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-browser-sync": "latest"
+  }
+}

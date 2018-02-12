@@ -1,0 +1,81 @@
+/* mixins **********************/
+.clearfix() {
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		clear: both;
+	}
+}
+
+.absolute() {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	display: block;
+}
+
+.last() {
+	> *:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+.placeholder(@color) {
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
+// Element must be `display: block` or `display: inline-block` to work.
+.overflow-ellipsis {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/** Typography */
+.font-style(@size, @height, @weight) {
+	font-size: @size;
+	line-height: @height;
+	font-weight: @weight;
+}
+.font-caption {
+	.font-style(@fz-caption, @lh-caption, @fw-regular);
+}
+.font-body {
+	.font-style(@fz-body, @lh-body, @fw-regular);
+}
+.font-subheading {
+	.font-style(@fz-subheading, @lh-subheading, @fw-regular);
+	margin-top: 0;
+	margin-bottom: @indent-small;
+}
+.font-title {
+	.font-style(@fz-title, @lh-title, @fw-bold);
+	margin-top: 0;
+	margin-bottom: @indent-small;
+}
+.font-headline {
+	.font-style(@fz-headline, @lh-headline, @fw-bold);
+	margin-top: 0;
+	margin-bottom: @indent-small;
+}
+.font-display-1 {
+	.font-style(@fz-display-1, @lh-display-1, @fw-bold);
+	margin-top: 0;
+	margin-bottom: @indent-medium;
+}
+.font-display-2 {
+	.font-display-1;
+	.font-style(@fz-display-2, @lh-display-2, @fw-bold);
+}
